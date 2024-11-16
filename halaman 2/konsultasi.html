@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultasi Kesehatan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #48c9b0;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+        header p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .author {
+            font-size: 16px;
+            color: #e74c3c;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Mengubah ukuran kontainer untuk membuatnya lebih kecil */
+        .container {
+            max-width: 400px; /* Mengurangi lebar maksimum */
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #48c9b0;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button[type="button"] {
+            background-color: #3498db;
+        }
+
+        /* Responsivitas untuk tampilan lebih kecil */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            button {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Konsultasi Kesehatan</h1>
+        <p>Masukkan data kesehatan Anda untuk mendapatkan saran yang lebih spesifik.</p>
+    </header>
+
+    <p class="author">Dibuat oleh Muhammad Irbabul Salas</p>
+
+    <div class="container">
+        <div class="section">
+            <form action="proses_konsultasi.php" method="POST">
+                <label for="name">Nama Lengkap:</label>
+                <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+                <label for="age">Usia:</label>
+                <input type="number" id="age" name="age" placeholder="Masukkan usia Anda" required>
+
+                <label for="gender">Jenis Kelamin:</label>
+                <select id="gender" name="gender" required>
+                    <option value="pria">Pria</option>
+                    <option value="wanita">Wanita</option>
+                </select>
+
+                <label for="weight">Berat Badan (kg):</label>
+                <input type="number" id="weight" name="weight" placeholder="Masukkan berat badan Anda" required>
+
+                <label for="height">Tinggi Badan (cm):</label>
+                <input type="number" id="height" name="height" placeholder="Masukkan tinggi badan Anda" required>
+
+                <label for="activity">Tingkat Aktivitas Harian:</label>
+                <select id="activity" name="activity" required>
+                    <option value="rendah">Rendah (tidak banyak aktivitas fisik)</option>
+                    <option value="sedang">Sedang (aktivitas normal)</option>
+                    <option value="tinggi">Tinggi (olahraga atau aktivitas fisik berat)</option>
+                </select>
+
+                <label for="goal">Tujuan Konsultasi:</label>
+                <select id="goal" name="goal" required>
+                    <option value="menurunkan">Menurunkan Berat Badan</option>
+                    <option value="menambah">Menambah Berat Badan</option>
+                    <option value="mempertahankan">Mempertahankan Berat Badan</option>
+                    <option value="kesehatan">Kesehatan Umum</option>
+                </select>
+
+                <label for="additional">Catatan atau Keluhan Tambahan:</label>
+                <textarea id="additional" name="additional" rows="4" placeholder="Contoh: sering merasa lelah, ingin lebih fit" required></textarea>
+
+                <button type="submit">Kirim Data Konsultasi</button>
+                <button type="button" onclick="window.location.href='indexs2.html'" style="background-color: #3498db;">Kembali ke Halaman Utama</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+
